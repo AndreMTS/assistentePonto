@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Configurações - bateuPonto</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .config-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .registros-hoje {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+    }
+    .registro-item {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .registro-pendente {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      color: #856404;
+    }
+    .registro-completo {
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+    }
+    .registro-atrasado {
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <h2>Configurações de Horários</h2>
+  
+  <div class="registros-hoje">
+    <h3>Registros de Hoje</h3>
+    <div id="registros-container">
+      <div class="registro-item" id="registro-entrada"></div>
+      <div class="registro-item" id="registro-almoco-saida"></div>
+      <div class="registro-item" id="registro-almoco-retorno"></div>
+      <div class="registro-item" id="registro-saida"></div>
+    </div>
+  </div>
+  
+  <div class="config-group">
+    <h3>Horário de Chegada</h3>
+    <label>Início:</label>
+    <input type="time" id="chegadaInicio">
+    <label>Fim:</label>
+    <input type="time" id="chegadaFim">
+  </div>
+
+  <div class="config-group">
+    <h3>Horário de Almoço</h3>
+    <h4>Saída para Almoço</h4>
+    <label>Início:</label>
+    <input type="time" id="almocoSaidaInicio">
+    <label>Fim:</label>
+    <input type="time" id="almocoSaidaFim">
+    
+    <h4>Retorno do Almoço</h4>
+    <label>Início:</label>
+    <input type="time" id="almocoRetornoInicio">
+    <label>Fim:</label>
+    <input type="time" id="almocoRetornoFim">
+  </div>
+
+  <div class="config-group">
+    <h3>Horário de Saída</h3>
+    <label>Início:</label>
+    <input type="time" id="saidaInicio">
+    <label>Fim:</label>
+    <input type="time" id="saidaFim">
+  </div>
+
+  <button id="salvar">Salvar Configurações</button>
+
+  <script src="options.js"></script>
+</body>
+</html> 
